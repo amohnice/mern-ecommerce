@@ -5,6 +5,8 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
 const postRoutes = require("./routes/post");
+const cartRoutes = require("./routes/cartRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 app.use(express.json());
@@ -19,6 +21,8 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/post", postRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api/products", productRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
