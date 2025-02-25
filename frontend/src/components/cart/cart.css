@@ -1,0 +1,19 @@
+.cart {
+  padding: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.cart-item button {
+  background-color: #DC2e2f;
+}
+
+.cart-item button:hover {
+  background-color: #F58B01;
+}
