@@ -3,8 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const authRoutes = require("./routes/auth");
-const postRoutes = require("./routes/post");
+// const authRoutes = require("./routes/auth");
+// const postRoutes = require("./routes/post");
 const cartRoutes = require("./routes/cartRoutes");
 const productRoutes = require("./routes/productRoutes");
 
@@ -19,8 +19,8 @@ mongoose.connect(process.env.MONGO_URI, {
   .then(() => console.log("✅ MongoDB Connected"))
   .catch(err => console.error(err));
 
-app.use("/api/auth", authRoutes);
-app.use("/api/post", postRoutes);
+// app.use("/api/auth", authRoutes);
+// app.use("/api/post", postRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/products", productRoutes);
 
